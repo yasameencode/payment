@@ -272,6 +272,7 @@ h2 {
   text-align: left;
   overflow-x: auto; /* السماح بالتمرير الأفقي */
   white-space: nowrap; /* منع العناصر من النزول للأسفل */
+  position: relative; /* لجعل عناصر داخلها تستخدم position: absolute */
 }
 
 .product-grid {
@@ -340,24 +341,83 @@ h2 {
 .section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* لضمان أن تكون العناصر في المنتصف عمودياً */
+  align-items: center;
   padding: 10px 0;
+  position: sticky;
 }
 
 .section-header h2 {
   font-size: 1rem; /* حجم النص */
   margin: 0; /* إزالة الهوامش الافتراضية */
+  position: sticky;
 }
 
 .section-header .view-all {
   font-size: 1rem; /* حجم النص للرابط */
   color: blue; /* لون النص */
   text-decoration: none; /* إزالة التسطير */
+  position: sticky; /* تثبيت العنصر على الشاشة */
+  right: 20px; /* المسافة من الحافة اليمنى */
+  top: 10px; /* المسافة من الأعلى */
+  padding: 10px 15px;
 }
 
 .section-header .view-all:hover {
   text-decoration: underline; /* إضافة تسطير عند التمرير */
 }
+
+
+.product-grid {
+  display: inline-flex; /* ترتيب الكروت بشكل أفقي */
+  gap: 20px;
+  padding-bottom: 30px; /* مسافة أسفل الصف */
+}
+
+
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  background-color: #f9f9f9;
+  overflow-x: auto; /* تفعيل السكرول الأفقي */
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: calc(100% - 20px);
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
 
 
 
