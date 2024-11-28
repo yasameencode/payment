@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأقسام</title>
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bottom_nav.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+  <style>
+    /* إعدادات عامة للصفحة */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* الحاوية الرئيسية */
+    .container {
+      max-width: 600px; /* عرض الصفحة */
+      margin: 0 auto; /* توسيط المحتوى */
+      padding: 10px;
+      overflow-y: auto;
+      height: 100vh; /* لتمكين التمرير */
+    }
+
+    /* قائمة الأقسام */
+    .category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .category-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px; /* لتنعيم الحواف */
+      padding: 20px 30px; /* زيادة التباعد الداخلي */
+      margin-bottom: 15px; /* زيادة التباعد بين العناصر */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .category-list li:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.02); /* تكبير العنصر عند التمرير */
+    }
+
+    /* إعدادات الصورة */
+    .category-list li img {
+      width: 60px; /* تكبير الصورة */
+      height: 60px; /* تكبير الصورة */
+      object-fit: contain;
+      margin-left: 20px; /* زيادة التباعد بين الصورة والنص */
+    }
+
+    /* النص */
+    .category-list li span {
+      flex: 1;
+    
+      font-size: 15px; /* تكبير حجم النص */
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* السهم */
+    .category-list li .arrow {
+      color: #999;
+      font-size: 30px; /* تكبير السهم */
+    }
+
+    /* استجابة للشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .container {
+        padding: 5px;
+      }
+
+      .category-list li {
+        padding: 15px 20px;
+      }
+
+      .category-list li img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .category-list li span {
+        font-size: 25px;
+      }
+
+      .category-list li .arrow {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="category-list">
+      <li>
+        <img src="../img/تلفاز.png" alt="تلفاز">
+        <span>تلفاز</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="طباخات">
+        <span>طباخات</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="غسالات">
+        <span>غسالات</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="سيبالت">
+        <span>سيبالت</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="ثلاجات">
+        <span>ثلاجات</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="مكانس كهربائية">
+        <span>مكانس كهربائية</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="مايكرويف">
+        <span>مايكرويف</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="برادات مياه">
+        <span>برادات مياه</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="مكانس كهربائية">
+        <span>مكانس كهربائية</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="مايكرويف">
+        <span>مايكرويف</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+      <li>
+        <img src="../img/تلفاز.png" alt="برادات مياه">
+        <span>برادات مياه</span>
+        <i class="fas fa-chevron-left arrow"></i>
+      </li>
+    </ul>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+
+
+<!-- شريط التنقل السفلي -->
+<div class="bottom-nav">
+  <a href="./categories/categories.html" class="nav-item active" id="sections">
+    <i class="fas fa-th-list"></i>
+    <span class="nav-text">الأقسام</span>
+  </a>
+
+
+<!-- عنصر السلة -->
+<a href="cart.html" class="nav-item" id="cart">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="nav-text">السلة</span>
+</a>
+
+<a href="../index.html" class="nav-item " id="home">
+  <i class="fas fa-home"></i>
+  <span class="nav-text">الرئيسية</span>
+</a>
+
+
+
+<!-- عنصر الفواتير -->
+<a href="invoices.html" class="nav-item" id="invoices">
+  <i class="fas fa-file-invoice"></i>
+  <span class="nav-text">الفواتير</span>
+</a>
+
+<!-- عنصر الحساب -->
+<a href="account.html" class="nav-item" id="account">
+  <i class="fas fa-user"></i>
+  <span class="nav-text">الحساب</span>
+</a>
+</div>
+</html>

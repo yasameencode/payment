@@ -1,3 +1,34 @@
+// تحديد جميع عناصر شريط التنقل
+const navItems = document.querySelectorAll('.nav-item');
+
+// تحميل العنصر النشط من LocalStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const activeItemId = localStorage.getItem('activeNavItem');
+    if (activeItemId) {
+        // إضافة الكلاس النشط للعنصر المحفوظ
+        document.getElementById(activeItemId)?.classList.add('active');
+    }
+});
+
+// إضافة حدث عند الضغط على أيقونة
+navItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        // إزالة الكلاس النشط عن جميع العناصر
+        navItems.forEach(nav => nav.classList.remove('active'));
+
+        // إضافة الكلاس النشط للعنصر الذي تم الضغط عليه
+        item.classList.add('active');
+
+        // تخزين العنصر النشط في LocalStorage
+        localStorage.setItem('activeNavItem', item.id);
+    });
+});
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const sliders = document.querySelectorAll(".slider"); // استهداف جميع السلايدرات
   let autoScrollIntervals = [];
