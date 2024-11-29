@@ -1,8 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f7f7f7;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex-grow: 1; /* يسمح للحاوية الرئيسية باستخدام المساحة المتبقية */
+  overflow-y: auto; /* تفعيل التمرير العمودي */
+}
+
 header {
   background-color: #2d4d41;
   color: white;
@@ -93,20 +102,24 @@ color: white;
 font-size: 10px;
 }
 .add-to-cart {
+  position: fixed;
+  bottom: 60px; /* المسافة بين الزر وأسفل الشاشة */
+  left: 10px;
+  right: 10px;
   background-color: #ffc107;
   color: white;
   text-align: center;
   padding: 15px 0;
   font-size: 18px;
-  margin: 0 20px;
   border-radius: 5px;
   cursor: pointer;
-  /* margin-bottom: 10px; */
-
+  z-index: 1000; /* لضمان أن الزر يظهر فوق باقي المحتوى */
 }
+
 .add-to-cart:hover {
   background-color: #e0a800;
 }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -217,3 +230,12 @@ background-color: #2d4d41;
 }
 
 
+@media screen and (max-height: 800px) {
+  .add-to-cart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+}
