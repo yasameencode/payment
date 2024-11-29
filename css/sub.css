@@ -83,14 +83,14 @@ width: 150px;
 
 .price-box .price {
 color: white;
-font-size: 18px;
+font-size: 12px;
 font-weight: bold;
 margin-right: 10px;
 }
 
 .price-box .currency {
 color: white;
-font-size: 14px;
+font-size: 10px;
 }
 .add-to-cart {
   background-color: #ffc107;
@@ -130,7 +130,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: fit-content;
-margin: 20px auto;
+margin: 10px auto;
 background-color: #2d4d41;
 border-radius: 10px;
 overflow: hidden;
@@ -141,7 +141,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 background-color: #2d4d41;
 border: none;
 color: white;
-font-size: 20px;
+font-size: 12px;
 font-weight: bold;
 padding: 10px 20px;
 cursor: pointer;
