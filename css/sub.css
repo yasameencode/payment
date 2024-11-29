@@ -7,10 +7,7 @@ body {
   flex-direction: column;
 }
 
-main {
-  flex-grow: 1; /* يسمح للحاوية الرئيسية باستخدام المساحة المتبقية */
-  overflow-y: auto; /* تفعيل التمرير العمودي */
-}
+
 
 header {
   background-color: #2d4d41;
@@ -63,7 +60,7 @@ justify-content: space-between;
 align-items: center;
 background-color: #f7f7f7;
 padding: 10px 20px;
-margin: 20px 0;
+margin: 2px 0;
 
 }
 
@@ -102,6 +99,7 @@ color: white;
 font-size: 10px;
 }
 .add-to-cart {
+  margin: 0 20px 60px 20px; /* إضافة هامش سفلي */
   position: fixed;
   bottom: 60px; /* المسافة بين الزر وأسفل الشاشة */
   left: 10px;
@@ -139,35 +137,35 @@ footer div img {
   height: 24px;
 }
 .counter {
-display: flex;
-align-items: center;
-justify-content: center;
-width: fit-content;
-margin: 10px auto;
-background-color: #2d4d41;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 15px auto; /* إضافة هامش سفلي لتوفير مساحة بين العداد وزر "إضافة إلى السلة" */
+  background-color: #2d4d41;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .counter button {
-background-color: #2d4d41;
-border: none;
-color: white;
-font-size: 12px;
-font-weight: bold;
-padding: 10px 20px;
-cursor: pointer;
-
+  background-color: #2d4d41;
+  border: none;
+  color: white;
+  font-size: 14px; /* حجم نص أصغر */
+  font-weight: bold;
+  padding: 8px 15px; /* تصغير الأزرار */
+  cursor: pointer;
 }
 
 .counter #count {
-font-size: 18px;
-font-weight: bold;
-color: rgb(255, 255, 255);
-padding: 10px 20px;
-background-color: #2d4d41;
+  font-size: 16px; /* حجم نص متوسط */
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  background-color: #2d4d41;
 }
+
 .counter span {
   font-size: 20px;
   font-weight: bold;

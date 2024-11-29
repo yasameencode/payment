@@ -127,7 +127,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* تقليل المسافة العلوية */
+  margin-top: 10px; /* تقليل المسافة العلوية */
 }
 
 .slider2 {
