@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/bottom_nav.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+  
+</head>
+<body>
+  <header class="fixed-header">
+    <div class="header-content">
+        <!-- <div class="left-section">
+            <span class="heart-icon">❤️</span>
+        </div> -->
+        <div class="right-section">
+            <span class="header-text">تسديد</span>
+            <img src="../img/logo_wite-removebg-preview.png" alt="Logo" class="logo-icon">
+        </div>
+    </div>
+</header>
+
+  <!-- Header -->
+  <header class="product-header">
+    <a href="../index.html" class="back-arrow">
+        <i class="fas fa-arrow-right" style="color: white;"></i>
+    </a>
+    
+    <span class="title">تفاصيل المنتج</span>
+    <div class="right-icons">
+        <i class="far fa-heart" style="color: transparent; -webkit-text-stroke: 1px red;"></i>
+        <span class="icon share-icon">🔗</span>
+    </div>
+</header>
+
+
+  
+
+    <!-- Product Image -->
+    <div class="slider-wrapper2">
+      <div class="slider2" id="ad-slider2">
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 1"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 2"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 3"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 1"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 2"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 3"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 1"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 2"></div>
+        <div class="slide2"><img src="../img/test.webp" alt="إعلان 3"></div>
+      </div>
+    </div>
+    
+
+    <!-- Product Details -->
+    <div class="product-details">
+        <h2>غسالة صحون</h2>
+        <div class="separator"></div>
+        <p>الشركة المنتجة: <span class="highlight">DLC</span></p>
+        <p>الموديل: <span class="highlight">WQP12-7703G</span></p>
+        <p>ميزات: غسالة صحون مدمجة دي ال سي - 14 إعداد - سلفر.</p>
+        <div class="separator"></div>
+    </div>
+
+    <!-- Price Section -->
+    <div class="price-section">
+      <div class="price-label">
+          <img src="../img/cardjpg.jpg" alt="أيقونة المحفظة">
+          <span>سعر المنتج</span>
+      </div>
+      <div class="price-box">
+          <span class="price">639,015 د.ع</span>          
+      </div>
+      <span class="currency">دينار عراقي</span>
+  </div>
+  
+
+    <!-- Counter Section -->
+    <div class="counter">
+      <button id="decrease">-</button>
+      <span id="count">1</span>
+      <button id="increase">+</button>
+  </div>
+  
+
+    <!-- Add to Cart Button -->
+    <div class="add-to-cart">
+        إضافة إلى السلة
+    </div>
+
+  
+
+    <!-- JavaScript -->
+    <script>
+      const countElement = document.getElementById('count');
+      const increaseButton = document.getElementById('increase');
+      const decreaseButton = document.getElementById('decrease');
+      const addToCartButton = document.querySelector('.add-to-cart');
+  
+      let count = 1;
+  
+      // تحديث العدد عند النقر على الزر "+" أو "-"
+      increaseButton.addEventListener('click', () => {
+          count++;
+          countElement.textContent = count;
+      });
+  
+      decreaseButton.addEventListener('click', () => {
+          if (count > 1) {
+              count--;
+              countElement.textContent = count;
+          }
+      });
+  
+      // إضافة المنتج إلى السلة عند النقر على زر "إضافة إلى السلة"
+      addToCartButton.addEventListener('click', () => {
+    const product = {
+        name: 'غسالة صحون',
+        price: 639015,
+        quantity: count,
+        image: 'img/test.webp' // تعديل المسار ليكون متناسقًا مع صفحة السلة
+    };
+    console.log(product.image);
+
+    // استرجاع السلة الحالية من localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // البحث إذا كان المنتج موجود بالفعل في السلة
+    const existingProduct = cart.find(item => item.name === product.name);
+
+    if (existingProduct) {
+        // تحديث العدد إذا كان المنتج موجود
+        existingProduct.quantity += count;
+    } else {
+        // إضافة المنتج الجديد إلى السلة
+        cart.push(product);
+    }
+
+    // حفظ السلة في localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert('تمت إضافة المنتج إلى السلة!');
+});
+
+  </script>
+  
+<!-- <script>
+  document.querySelector('.back-icon').addEventListener('click', () => {
+      window.history.back(); // الرجوع للصفحة السابقة
+  });
+
+  document.querySelector('.share-icon').addEventListener('click', () => {
+      alert('مشاركة المنتج!'); // استبدل هذا بالإجراء المناسب
+  });
+</script> -->
+
+
+  <script src="../js/script.js"></script>
+</body>
+
+<!-- شريط التنقل السفلي -->
+<div class="bottom-nav">
+  <a href="../categories/categories.html" class="nav-item" id="sections">
+    <i class="fas fa-th-list"></i>
+    <span class="nav-text">الأقسام</span>
+  </a>
+
+<!-- عنصر السلة -->
+<a href="../shopping_cart.html" class="nav-item" id="cart">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="nav-text">السلة</span>
+</a>
+
+<a href="../index.html" class="nav-item active" id="home">
+  <i class="fas fa-home"></i>
+  <span class="nav-text">الرئيسية</span>
+</a>
+
+<!-- عنصر الفواتير -->
+<a href="invoices.html" class="nav-item" id="invoices">
+  <i class="fas fa-file-invoice"></i>
+  <span class="nav-text">الفواتير</span>
+</a>
+
+<!-- عنصر الحساب -->
+<a href="../profile.html" class="nav-item" id="account">
+  <i class="fas fa-user"></i>
+  <span class="nav-text">الحساب</span>
+</a>
+</div>
+</html>

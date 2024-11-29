@@ -121,6 +121,55 @@ h2 {
 
 
 
+/* ================== السلايدر ================== */
+.slider-wrapper2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* تقليل المسافة العلوية */
+}
+
+.slider2 {
+
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 0; /* إزالة الحواف */
+  width: 90%; /* تقليل عرض السلايدر */
+  max-width: 500px; /* تحديد أقصى عرض */
+  direction: rtl; /* عكس اتجاه السلايدر */
+}
+
+.slider2::-webkit-scrollbar {
+  display: none; /* إخفاء شريط التمرير */
+}
+
+.slide2 {
+  margin-top: 100px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 100%; /* عرض السلايدر بالكامل */
+  aspect-ratio: 4 / 3; /* نسبة العرض إلى الارتفاع */
+  overflow: hidden;
+  border-radius: 8px; /* إضافة حواف مستديرة للصورة */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل خفيف للصورة */
+}
+
+.slide2 img {
+
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain;  */
+}
+
+
+
+
+
+
+
 
 /* ================== البحث ================== */
 .search-container {
@@ -174,61 +223,58 @@ h2 {
 
 
 /* ================== الأقسام ================== */
+.categories {
+  margin-top: 20px;
+}
+
 .category {
   display: flex;
   flex-direction: column; /* ترتيب العناصر عموديًا */
-  align-items: right; /* توسيط العناصر أفقيًا */
+  align-items: center; /* توسيط العناصر أفقيًا */
   text-align: center; /* محاذاة النص في المنتصف */
-  gap: 5px; /* تقليل المسافة بين العناصر */
+  gap: 15px; /* مسافة أكبر بين الصورة والنص */
 }
 
 .categories h2 {
-  font-size: 1rem;
+  font-size: 1.5rem; /* تكبير عنوان القسم */
   color: #333;
   margin-bottom: 20px;
-  text-align: right;
+  text-align: right; /* توسيط النص الرئيسي */
 }
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* توزيع الأعمدة بشكل افتراضي */
-  justify-items: center; /* توسيط العناصر */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* زيادة حجم الأعمدة */
+  gap: 25px; /* مسافة أكبر بين العناصر */
+  justify-items: center; /* توسيط العناصر داخل الشبكة */
 }
-
-.category {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-}
-
 
 .icon-box {
-  width: 50px; /* عرض الأيقونة */
-  height: 50px; /* ارتفاع الأيقونة */
-  margin-bottom: 5px; /* مسافة صغيرة أسفل الأيقونة */
-  display: flex; /* عرض داخلي مرن لتوسيط الصورة */
-  justify-content: center; /* توسيط الصورة أفقيًا */
-  align-items: center; /* توسيط الصورة عموديًا */
-  background-color: #f9f9f9; /* خلفية فاتحة */
-  border-radius: 10px; /* انحناء خفيف للأيقونة */
+  width: 100px; /* عرض أكبر للأيقونات */
+  height: 100px; /* ارتفاع أكبر للأيقونات */
+  display: flex; /* جعل الحاوية مرنة */
+  justify-content: center; /* توسيط المحتوى أفقيًا */
+  align-items: center; /* توسيط المحتوى عموديًا */
+
+  overflow: hidden; /* التأكد من عدم تجاوز الصورة للحاوية */
+
 }
 
-
 .icon-box img {
-  width: 150%;
-  height: 150%; 
-  object-fit: contain;
+  width: 80%; /* زيادة حجم الصورة داخل الحاوية */
+  height: 80%; 
+  object-fit: contain; /* التأكد من تناسب الصورة بدون قص */
 }
 
 .category p {
-  margin: 10; /* إزالة الهوامش الافتراضية */
-  font-size: 0.7rem; /* تصغير النص */
-  font-weight: bold; /* جعل النص أكثر وضوحًا */
-  color: #6f6f6f; /* لون النص */
-  text-align: center; /* توسيط النص أسفل الصورة */
+  margin: 0; /* إزالة الهوامش */
+  font-size: 1rem; /* تكبير حجم النص */
+  font-weight: bold; /* جعل النص بارزًا */
+  color: #333; /* لون غامق للنص */
+  text-align: center; /* توسيط النص */
 }
+
+
 
 
 
@@ -546,12 +592,12 @@ button:hover {
   }
 
   .icon-box {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
   }
 
   .category p {
-    font-size: 0.6rem;
+    font-size: 1rem;
     margin-top: 5px;
   }
 
