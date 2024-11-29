@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
 
@@ -119,24 +119,7 @@ font-size: 10px;
   background-color: #e0a800;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #2d4d41;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-}
-footer div {
-  text-align: center;
-  cursor: pointer;
-}
-footer div img {
-  width: 24px;
-  height: 24px;
-}
+
 .counter {
   display: flex;
   align-items: center;
