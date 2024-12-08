@@ -430,6 +430,7 @@ h2 {
   margin: 0; /* إزالة الهوامش الافتراضية */
   margin-right: 20px; /* إضافة مسافة يمين */
   position: sticky;
+  color: #264440;
 }
 
 .section-header .view-all {
@@ -628,6 +629,7 @@ button:hover {
   .categories h2 {
     font-size: 0.9rem;
     /* margin-bottom: 10px; */
+    color: #264440;
   }
 
   .category-grid {
@@ -657,7 +659,7 @@ button:hover {
   }
 
   .product-card h3 {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     margin: 5px 0;
   }
 
@@ -726,7 +728,7 @@ button:hover {
   }
 
   .product-card h3 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     margin: 5px 0;
   }
 
