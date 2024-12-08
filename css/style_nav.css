@@ -4,14 +4,16 @@
   width: 95%;
   max-width: 500px;
   min-width: 300px;
-  height: 12vh;
+  height: 12vh; /* الارتفاع الافتراضي كنسبة من ارتفاع الشاشة */
+  min-height: 60px; /* الحد الأدنى للارتفاع */
+  max-height: 120px; /* الحد الأقصى للارتفاع */
   border-radius: 20px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   overflow: hidden;
-  position: fixed; /* ثابت */
-  top: 750px; /* 30px من الأعلى */
+  position: fixed;
+  top: 80vh; /* النسبة المئوية لتحديد المسافة من أعلى الشاشة */
   left: 50%; /* في منتصف الشاشة أفقيًا */
   transform: translateX(-50%); /* لتوسيط العنصر أفقيًا */
   z-index: 1000; /* فوق باقي المحتويات */
@@ -172,5 +174,23 @@
 
   .icon {
     font-size: 1.1rem; /* تقليل حجم الأيقونات */
+  }
+}
+
+/* Media Query: الأجهزة المتوسطة */
+@media (max-height: 800px) {
+  #navbarContainer {
+    height: 10vh; /* تقليل الارتفاع لأجهزة الشاشات الصغيرة */
+    min-height: 50px; /* تعديل الحد الأدنى */
+    max-height: 100px; /* تعديل الحد الأقصى */
+  }
+}
+
+/* Media Query: الأجهزة الصغيرة جدًا */
+@media (max-height: 600px) {
+  #navbarContainer {
+    height: 8vh; /* تقليل الارتفاع أكثر لأجهزة الشاشات الأصغر */
+    min-height: 40px; /* تعديل الحد الأدنى */
+    max-height: 80px; /* تعديل الحد الأقصى */
   }
 }
