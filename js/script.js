@@ -27,9 +27,29 @@ navItems.forEach(item => {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("ad-slider"); // استهداف السلايدر
+
+  // رابط API لجلب الصور
+  const apiURL = "https://89.116.110.51:3000/aqs/api/v1/getProducts";
+
+  // جلب البيانات من API
+  fetch(apiURL)
+    .then((response) => response.json())
+    .then((data) => {
+      // تفريغ السلايدر الحالي
+      slider.innerHTML = "";
+
+      // إنشاء عناصر السلايدر بناءً على الصور
+      data.forEach((item) => {
+        const slide = document.createElement("div");
+        slide.className = "slide";
+        slide.innerHTML = `<img src="${item.image}" alt="${item.title}">`; // استبدال المسار
+        slider.appendChild(slide);
+      });
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+
   const sliders = document.querySelectorAll(".slider"); // استهداف جميع السلايدرات
   let autoScrollIntervals = [];
 

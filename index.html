@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسديد</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bottom_nav.css">
-    <link
+    <!-- <link rel="stylesheet" href="./css/bottom_nav.css"> -->
+    <!-- <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
+/> -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'><link rel="stylesheet" href="./css/style_nav.css">
 
 </head>
 <body>
@@ -27,112 +28,46 @@
   </header>
 
     <!-- سلايدر الإعلانات -->
-    <div class="slider-wrapper">
-      <div class="slider" id="ad-slider">
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 1"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 2"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 3"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 1"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 2"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 3"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 1"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 2"></div>
-        <div class="slide"><img src="./img/test.webp" alt="إعلان 3"></div>
-      </div>
-    </div>
-
-    <!-- البحث -->
-    <div class="search-container">
-      <input type="text" placeholder="ما الذي تبحث عنه؟">
-      <button><span class="search-icon">🔍</span></button>
-    </div>
-    
-    
-    
-    
-
-<!-- الأقسام -->
-<section class="categories">
-  <h2>تسوق من الأكثر رواجاً</h2>
-  <div class="category-grid">
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/refrigerator.html">
-          <img src="./img/ثلاجات.png" alt="ثلاجات" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>ثلاجات</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/washing.html">
-          <img src="./img/غسالات.png" alt="غسالات" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>غسالات</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/tv.html">
-          <img src="./img/تلفاز.png" alt="تلفاز" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>تلفاز</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/cook.html">
-          <img src="./img/طباخات.png" alt="طباخات" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>طباخات</p>
-    </div>
-    
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/freezers.html">
-          <img src="./img/مجمدات.png" alt="مجمدات" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>مجمدات</p>
-    </div>
-
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/water_cooler.html">
-          <img src="./img/برادات مياه.png" alt="برادات مياه" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>برادات مياه</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/microwave.html">
-          <img src="./img/مايكرويف.png" alt="مايكرويف" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>مايكرويف</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/vacuum_cleaner.html">
-          <img src="./img/مكانس كهربائية.png" alt="مكانس كهربائية" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>مكانس كهربائية</p>
-    </div>
-    <div class="category">
-      <div class="icon-box">
-        <a href="./categories/categories.html">
-          <img src="./img/الاقسام.png" alt="الأقسام" style="cursor: pointer;">
-        </a>
-      </div>
-      <p>الأقسام</p>
-    </div>
-
-
+  <!-- سلايدر الإعلانات -->
+<div class="slider-wrapper">
+  <div class="slider" id="ad-slider">
+    <!-- الصور ستُضاف ديناميكيًا هنا -->
   </div>
-</section>
+</div>
+
+
+    <div class="custom-container">
+      <div class="option">
+        <span>تمكين سقف الشراء</span>
+      </div>
+      <div class="option">
+        <span> 0 د.ع </span>
+      </div>
+    </div>
+    
+
+<!-- البحث -->
+<div class="search-container">
+  <button id="search-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke-width="1"></circle>
+      <line x1="16" y1="16" x2="22" y2="22" stroke-width="2"></line>
+    </svg>
+  </button>
+  <input type="text" id="search-input" placeholder="ما الذي تبحث عنه؟">
+</div>
+
+
+
+    
+    
+    <!-- الأقسام -->
+    <section class="categories">
+      <h2>تسوق من الأكثر رواجاً</h2>
+      <div class="category-grid" id="categories-container">
+        <!-- سيتم ملء الأقسام ديناميكيًا هنا -->
+      </div>
+    </section>
 
 
   <!-- سلايدر الإعلانات -->
@@ -154,60 +89,22 @@
     <h2>مضاف حديثاً</h2>
     <a href="./products/all_products.html" class="view-all">عرض الكل</a>
   </div>
-<section class="products">
-  
-  <div class="product-grid">
-      <div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-          <img src="./img/test.webp" alt="منتج 1">
-          <h3>غسالة ملابس</h3>
-          <div class="price-separator"></div>
-          <p>د.ع 689,000</p>
-          <button>إضافة إلى السلة</button>
-      </div>
-      <div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-          <img src="./img/test.webp" alt="منتج 2">
-          <h3>مكنسة كهربائية</h3>
-          <div class="price-separator"></div> 
-          <p>د.ع 340,724</p>
-          <button>إضافة إلى السلة</button>
-      </div>
-      <div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-        <img src="./img/test.webp" alt="منتج 2">
-        <h3>مكنسة كهربائية</h3>
-        <div class="price-separator"></div> 
-        <p>د.ع 340,724</p>
-        <button>إضافة إلى السلة</button>
+
+  <section class="products">
+    <div class="product-grid" id="product-grid">
+      <!-- المنتجات سيتم إضافتها ديناميكيًا هنا -->
     </div>
-    <div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-      <img src="./img/test.webp" alt="منتج 2">
-      <h3>مكنسة كهربائية</h3>
-      <div class="price-separator"></div> 
-      <p>د.ع 340,724</p>
-      <button>إضافة إلى السلة</button>
-  </div>
-  <div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-    <img src="./img/test.webp" alt="منتج 2">
-    <h3>مكنسة كهربائية</h3>
-    <div class="price-separator"></div> 
-    <p>د.ع 340,724</p>
-    <button>إضافة إلى السلة</button>
-</div>
-<div class="product-card" onclick="window.location.href='./products/sub_details.html';">
-  <img src="./img/test.webp" alt="منتج 2">
-  <h3>مكنسة كهربائية</h3>
-  <div class="price-separator"></div> 
-  <p>د.ع 340,724</p>
-  <button>إضافة إلى السلة</button>
-</div>
-  </div>
-</section>
+  </section>
+  
 
 
-  <!-- منتجات مضافة حديثاً -->
+  <!-- اكثر طلبآ  -->
   <div class="section-header">
     <h2>اكثر طلبآ</h2>
     <a href="./products/most_requested.html" class="view-all">عرض الكل</a>
   </div>
+
+
   <section class="products" style="margin-bottom: 50px;">
   
     <div class="product-grid">
@@ -256,41 +153,200 @@
   </div>
     </div>
   </section>
+
+<script>
+document.getElementById("search-button").addEventListener("click", () => {
+  const searchInput = document.getElementById("search-input").value.trim();
+  if (searchInput) {
+    // الانتقال إلى صفحة النتائج مع تمرير نص البحث كجزء من الرابط
+    window.location.href = `result_search.html?query=${encodeURIComponent(searchInput)}`;
+  } else {
+    alert("يرجى إدخال نص البحث.");
+  }
+});
+
+
+</script>
     <script src="./js/script.js"></script>
 </body>
 
 
+
+
+
+
+
 <!-- شريط التنقل السفلي -->
-<div class="bottom-nav">
-  <a href="./categories/categories.html" class="nav-item" id="sections">
-    <i class="fas fa-th-list"></i>
-    <span class="nav-text">الأقسام</span>
-  </a>
-
-<!-- عنصر السلة -->
-<a href="shopping_cart.html" class="nav-item" id="cart">
-  <i class="fas fa-shopping-cart"></i>
-  <span class="nav-text">السلة</span>
-</a>
-
-<a href="index.html" class="nav-item active" id="home">
-  <i class="fas fa-home"></i>
-  <span class="nav-text">الرئيسية</span>
-</a>
-
-<!-- عنصر الفواتير -->
-<a href="invoices.html" class="nav-item" id="invoices">
-  <i class="fas fa-file-invoice"></i>
-  <span class="nav-text">الفواتير</span>
-</a>
-
-<!-- عنصر الحساب -->
-<a href="profile.html" class="nav-item" id="account">
-  <i class="fas fa-user"></i>
-  <span class="nav-text">الحساب</span>
-</a>
+<div id="navbarContainer">
+  <div id="navbar">
+    <div id="bubbleWrapper">
+      <div id="bubble1" class="bubble" ><span class="icon"><i class="fas fa-th-large"></i></span></div>
+      <div id="bubble2" class="bubble" ><span class="icon"><i class="fas fa-shopping-cart"></i></span></div>
+      <div id="bubble3" class="bubble" ><span class="icon"><i class="fas fa-home"></i></span></div>
+      <div id="bubble4" class="bubble" ><span class="icon"><i class="fas fa-file-invoice-dollar"></i></span></div>
+      <div id="bubble5" class="bubble"><span class="icon"><i class="fas fa-user"></i></span></div> <!-- أيقونة جديدة -->
+    </div>
+    <div id="menuWrapper">
+      <div id="menu1" class="menuElement" onclick="navigateTo('./categories/categories.html')" onclick="move('1', '90%', '#ffffff')"><i class="fas fa-th-large" style="font-size: 1rem; color: white;"></i></div>
+      <div id="menu2" class="menuElement" onclick="navigateTo('shopping_cart.html')" onclick="move('2', '70%', '#ffffff')"><i class="fas fa-shopping-cart" style="font-size: 1rem; color: white;"></i></div>
+      <div id="menu3" class="menuElement" onclick="navigateTo('index.html')" onclick="move('3', '50%', '#ffffff')"><i class="fas fa-home" style="font-size: 1rem; color: white;"></i></div>
+      <div id="menu4" class="menuElement" onclick="navigateTo('invoices.html')" onclick="move('4', '30%', '#ffffff')"><i class="fas fa-file-invoice-dollar" style="font-size: 1rem; color: white;"></i></div>
+      <div id="menu5" class="menuElement" onclick="navigateTo('profile.html')" onclick="move('5', '10%', '#ffffff')"><i class="fas fa-user" style="font-size: 1rem; color: white;"></i></div> <!-- أيقونة جديدة -->
+    </div>    
+  </div>
+  <div id="bgWrapper">
+    <div id="bg"></div>
+    <div id="bgBubble"></div>
+  </div>
 </div>
 
+  <svg width="0" height="0" >
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter"/>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script  src="./js/script_nav.js"></script>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+
+<script>
+// البحث عند النقر على الزر
+document.getElementById("search-button").addEventListener("click", function () {
+  const searchInput = document.getElementById("search-input").value.trim();
+
+  if (searchInput) {
+    // طلب البحث من API
+    const searchURL = `https://89.116.110.51:3000/aqs/api/v1/filterProducts/${searchInput}`;
+
+    fetch(searchURL)
+      .then((response) => response.json())
+      .then((data) => {
+        // عرض النتائج
+        displaySearchResults(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching search results:", error);
+      });
+  } else {
+    alert("يرجى إدخال كلمة للبحث!");
+  }
+});
+
+// عرض نتائج البحث
+function displaySearchResults(results) {
+  const productGrid = document.getElementById("product-grid");
+  productGrid.innerHTML = ""; // تنظيف الشبكة
+
+  results.forEach((product) => {
+    // إنشاء بطاقة المنتج
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
+    productCard.setAttribute(
+      "onclick",
+      `window.location.href=./categories/cook.html?id=${product.value}';`
+    );
+
+    // محتوى البطاقة
+    productCard.innerHTML = `
+      <h3>${product.label}</h3>
+    `;
+
+    // إضافة البطاقة إلى الشبكة
+    productGrid.appendChild(productCard);
+  });
+}
+
+
+</script>
+
+
+  
+  <script>  
+    async function fetchCategories() {
+      try {
+        const response = await fetch('https://89.116.110.51:3000/aqs/api/v1/getCategories');
+        const categories = await response.json();
+  
+        // تحقق من نجاح الاستجابة وتأكد من أن البيانات مصفوفة
+        if (Array.isArray(categories)) {
+          const container = document.getElementById('categories-container');
+          container.innerHTML = ''; // تفريغ المحتوى الافتراضي
+  
+          // إنشاء أقسام ديناميكيًا
+          categories.forEach(category => {
+            // التأكد من أن القسم نشط
+            if (category.active === 1) {
+              const categoryElement = document.createElement('div');
+              categoryElement.className = 'category';
+              categoryElement.innerHTML = `
+                <div class="icon-box">
+                  <a href="./categories/cook.html?id=${category.id}">
+                    <img src="${category.image}" alt="${category.title}" style="cursor: pointer;">
+                  </a>
+                </div>
+                <p>${category.title}</p>
+              `;
+              container.appendChild(categoryElement);
+            }
+          });
+        } else {
+          console.error('Unexpected data format:', categories);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    }
+  
+    // استدعاء الدالة عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', fetchCategories);
+
+
+
+    async function fetchProducts() {
+  try {
+    const response = await fetch('https://89.116.110.51:3000/aqs/api/v1/getProductsRecently');
+    const products = await response.json();
+
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ''; // تفريغ المحتوى الافتراضي
+
+    products.forEach((product) => {
+      const productCard = `
+        <div class="product-card" onclick="window.location.href='./products/sub_details.html?id=${product.id}';">
+          <img src="${product.image}" alt="${product.title}">
+          <h3>${product.title}</h3>
+          <div class="price-separator"></div>
+          <p>د.ع ${product.price.toLocaleString()}</p>
+          <button onclick="addToCart(${product.id}); event.stopPropagation();">إضافة إلى السلة</button>
+        </div>
+      `;
+      productGrid.innerHTML += productCard;
+    });
+  } catch (error) {
+    console.error('Error fetching products:', error);
+  }
+}
+
+// استدعاء الدالة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', fetchProducts);
+
+// إضافة المنتج إلى السلة (وظيفة توضيحية)
+function addToCart(productId) {
+  alert(`تمت إضافة المنتج رقم ${productId} إلى السلة!`);
+}
+
+
+  </script>
 
 
 </html>

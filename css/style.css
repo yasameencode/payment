@@ -18,23 +18,24 @@ h2 {
 .fixed-header {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-color: #254e45; 
+  left: 0;
+  width: 98%; /* يغطي العرض بالكامل */
+  background-color: #264440;
   color: white;
-  height: 60px;
+  height: 80px; /* ارتفاع مناسب للهيدر */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  z-index: 1000;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 20px; /* تباعد داخلي للجانبين */
+  z-index: 1000; /* فوق جميع العناصر */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف */
 }
 
 .fixed-header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100%; /* يغطي العرض بالكامل */
 }
 
 .fixed-header .left-section,
@@ -62,13 +63,13 @@ h2 {
 .fixed-header .logo-icon {
   width: 30px;
   height: 30px;
-  margin-right: 2px;
+  /* margin-right: 2px; */
 }
 
 .fixed-header .header-text {
   font-size: 18px;
   font-weight: bold;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 
@@ -81,19 +82,17 @@ h2 {
   align-items: center;
   margin-top: 70px;
   background-color: #f9f9f9;
+  width: 100%; /* اجعل عرض الحاوية 100% */
+  overflow: hidden; /* منع ظهور الحواف */
 }
 
 .slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 10px;
-  padding: 10px;
-  width: 80%;
-  max-width: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  gap: 0; /* إزالة المسافات بين الصور */
+  padding: 0; /* إزالة الحواف الداخلية */
+  width: 100%; /* عرض السلايدر 100% */
   direction: rtl; /* عكس اتجاه السلايدر */
 }
 
@@ -102,22 +101,54 @@ h2 {
 }
 
 .slide {
-  flex: 0 0 auto;
+  flex: 0 0 100%; /* عرض كل شريحة يساوي عرض الشاشة */
   scroll-snap-align: center;
-  width: calc(100% - 20px);
-  max-width: 100%;
-  aspect-ratio: 3 / 2;
-  border-radius: 10px;
+  width: 100%; /* عرض الشريحة بالكامل */
+  aspect-ratio: 3 / 2; /* الحفاظ على نسبة العرض إلى الارتفاع */
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .slide img {
-  width: 100%;
+  width: 100%; /* اجعل الصورة تملأ العرض بالكامل */
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* ملاءمة الصورة للحاوية */
 }
+
+
+
+.custom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* padding: 10px 20px; */
+  margin: 20px auto; /* تمركز الحاوية */
+  max-width: 90%; /* تصغير العرض */
+  width: 390px; /* عرض ثابت للشاشات الصغيرة */
+}
+
+.custom-container .option {
+  flex: 1; /* توزيع العناصر بالتساوي */
+  text-align: center;
+  font-size: 14px; /* تصغير النص قليلاً */
+  font-weight: bold;
+  color: #333;
+  border-right: 1px solid #ddd; /* خط فاصل بين العناصر */
+}
+
+.custom-container .option:last-child {
+  border-right: none; /* إزالة الخط الفاصل من العنصر الأخير */
+}
+
+.custom-container .option span {
+  display: block;
+  padding: 10px;
+  color: #254e45; /* لون النص */
+}
+
 
 
 
@@ -165,26 +196,19 @@ h2 {
 }
 
 
-
-
-
-
-
-
 /* ================== البحث ================== */
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 80%;
   max-width: 500px;
   margin: 20px auto;
   padding: 10px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #666; /* لون الحدود */
   border-radius: 25px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  gap: 8px;
+  gap: 10px;
+  box-shadow: none; /* إزالة الظلال */
 }
 
 .search-container input {
@@ -195,6 +219,7 @@ h2 {
   color: #333;
   background: none;
   padding: 5px 10px;
+  text-align: right; /* النص يبدأ من الجهة اليمنى */
 }
 
 .search-container input::placeholder {
@@ -206,18 +231,27 @@ h2 {
   background: none;
   border: none;
   padding: 0;
-  margin-left: 5px;
   cursor: pointer;
-  font-size: 1.2rem;
-  color: #888;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.search-container button:hover {
-  color: #333;
+/* تصميم الأيقونة */
+.search-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 4a6 6 0 110 12 6 6 0 010-12zm0 0l8 8" /%3E%3C/svg%3E') no-repeat center;
+  background-size: contain;
+  color: #666; /* لون مطابق للصورة */
 }
+
+.search-container button:hover .search-icon {
+  color: #333; /* تغيير اللون عند التمرير */
+}
+
+
 
 
 
@@ -232,49 +266,47 @@ h2 {
   flex-direction: column; /* ترتيب العناصر عموديًا */
   align-items: center; /* توسيط العناصر أفقيًا */
   text-align: center; /* محاذاة النص في المنتصف */
-  gap: 15px; /* مسافة أكبر بين الصورة والنص */
 }
 
 .categories h2 {
-  font-size: 1.5rem; /* تكبير عنوان القسم */
+  font-size: 1.4rem; /* تكبير حجم عنوان القسم */
   color: #333;
   margin-bottom: 20px;
-  text-align: right; /* توسيط النص الرئيسي */
+  text-align: right; /* محاذاة النص الرئيسي لليمين */
+  margin-right: 15px;
 }
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* زيادة حجم الأعمدة */
-  gap: 25px; /* مسافة أكبر بين العناصر */
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* تكبير حجم الأعمدة */
+  gap: 10px; /* زيادة المسافة بين العناصر */
   justify-items: center; /* توسيط العناصر داخل الشبكة */
 }
 
 .icon-box {
-  width: 100px; /* عرض أكبر للأيقونات */
-  height: 100px; /* ارتفاع أكبر للأيقونات */
+  width: 70px; /* تكبير عرض الأيقونات */
+  height: 70px; /* تكبير ارتفاع الأيقونات */
   display: flex; /* جعل الحاوية مرنة */
   justify-content: center; /* توسيط المحتوى أفقيًا */
   align-items: center; /* توسيط المحتوى عموديًا */
-
   overflow: hidden; /* التأكد من عدم تجاوز الصورة للحاوية */
-
+  background-color: #f5f5f5; /* خلفية خفيفة للأيقونات */
+  border-radius: 10px; /* جعل الحواف مستديرة قليلاً */
 }
 
 .icon-box img {
-  width: 80%; /* زيادة حجم الصورة داخل الحاوية */
-  height: 80%; 
+  width: 100%; /* تناسب الصورة مع الحاوية */
+  height: 100%;
   object-fit: contain; /* التأكد من تناسب الصورة بدون قص */
 }
 
 .category p {
-  margin: 0; /* إزالة الهوامش */
+  margin: 5px 0; /* إضافة مسافة صغيرة أعلى وأسفل النص */
   font-size: 1rem; /* تكبير حجم النص */
-  font-weight: bold; /* جعل النص بارزًا */
+  font-weight: bold; /* زيادة سماكة النص */
   color: #333; /* لون غامق للنص */
   text-align: center; /* توسيط النص */
 }
-
-
 
 
 
@@ -363,12 +395,12 @@ h2 {
 .price-separator {
   width: 100%; 
   height: 2px; /* سماكة الفاصل */
-  background-color: #e7ea1c;
-  margin: 10px 0; /* مسافة قبل وبعد الفاصل */
+  background-color: #f5cb53;
+  margin: 1px 0; /* مسافة قبل وبعد الفاصل */
 }
 
 .product-card button {
-  background-color: #e7ea1c;
+  background-color: #f5cb53;
   color: #000;
   border: none;
   padding: 10px 0; /* حجم زر مريح */
@@ -380,7 +412,7 @@ h2 {
 }
 
 .product-card button:hover {
-  background-color: #d4d60c;
+  background-color: #f5cb53;
 }
 
 
@@ -390,22 +422,25 @@ h2 {
   align-items: center;
   padding: 10px 0;
   position: sticky;
+  /* margin-right: 30px; */
 }
 
 .section-header h2 {
   font-size: 1rem; /* حجم النص */
   margin: 0; /* إزالة الهوامش الافتراضية */
+  margin-right: 20px; /* إضافة مسافة يمين */
   position: sticky;
 }
 
 .section-header .view-all {
   font-size: 1rem; /* حجم النص للرابط */
-  color: blue; /* لون النص */
+  color: rgb(87, 93, 80); 
   text-decoration: none; /* إزالة التسطير */
   position: sticky; /* تثبيت العنصر على الشاشة */
   right: 20px; /* المسافة من الحافة اليمنى */
   top: 10px; /* المسافة من الأعلى */
   padding: 10px 15px;
+  margin-left: 30px;
 }
 
 .section-header .view-all:hover {
@@ -421,13 +456,13 @@ h2 {
 
 
 
-.slider-wrapper {
+/* .slider-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 70px;
   background-color: #f9f9f9;
-  overflow-x: auto; /* تفعيل السكرول الأفقي */
+  overflow-x: auto;
 }
 
 .slider {
@@ -436,11 +471,9 @@ h2 {
   scroll-snap-type: x mandatory;
   gap: 10px;
   padding: 10px;
-  width: 80%;
+  width: 150%;
   max-width: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .slide {
@@ -459,16 +492,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -476,7 +500,7 @@ h2 {
 
 /* ================== الأزرار ================== */
 button {
-  background-color: #e7ea1c;
+  background-color: #f5cb53;
   color: rgb(0, 0, 0);
   border: none;
   padding: 10px 15px;
@@ -493,6 +517,22 @@ button:hover {
 
 /* ================== استجابة (Responsive) ================== */
 @media (max-width: 768px) {
+
+  .fixed-header {
+    height: 50px; /* تقليل الارتفاع على الشاشات الصغيرة */
+    padding: 0 10px; /* تقليل التباعد الداخلي */
+  }
+
+  .fixed-header .header-text {
+    font-size: 16px; /* تصغير النص */
+  }
+
+  .fixed-header .logo-icon {
+    width: 25px; /* تصغير عرض الشعار */
+    height: 25px;
+  }
+
+
   /* المنتج */
   .product-card {
     max-width: 200px;
@@ -535,38 +575,42 @@ button:hover {
   }
 }
 
+
+
+
+
 @media (max-width: 480px) {
   /* النصوص العامة */
-  body {
-    font-size: 0.85rem; /* تصغير حجم النص العام */
-  }
+  /* body {
+    font-size: 0.5rem;
+  } */
 
   /* الهيدر */
   .fixed-header {
-    height: 50px; /* تقليل ارتفاع الهيدر */
-    padding: 0 10px; /* تقليل الحشوات الداخلية */
+    height: 45px; /* تقليل الارتفاع أكثر */
+    padding: 0 8px;
   }
 
   .fixed-header .header-text {
-    font-size: 14px; /* تصغير النص داخل الهيدر */
+    font-size: 14px;
   }
 
   .fixed-header .logo-icon {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
 
   /* البحث */
   .search-container {
-    width: 95%;
+    width: 80%;
     padding: 6px 8px;
     gap: 3px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .search-container input {
     font-size: 0.8rem;
-    padding: 3px 5px;
+    padding: 5px 5px;
   }
 
   .search-container button {
@@ -587,8 +631,8 @@ button:hover {
   }
 
   .category-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    /* gap: 1px; */
   }
 
   .icon-box {
@@ -598,7 +642,7 @@ button:hover {
 
   .category p {
     font-size: 1rem;
-    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   /* المنتج */
@@ -652,14 +696,19 @@ button:hover {
 
 
 @media (max-width: 429px) {
+
+  .section-header .view-all {
+    margin-left: 10px;
+  }
+  
   /* الأقسام */
   .categories h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .category-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    /* gap: 8px; */
   }
 
   .category p {
