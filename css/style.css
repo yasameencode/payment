@@ -10,7 +10,7 @@ body {
 
 h2 {
   margin: 20px 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #333;
 }
 
@@ -433,16 +433,22 @@ h2 {
   color: #264440;
 }
 
-.section-header .view-all {
-  font-size: 1rem; /* حجم النص للرابط */
-  color: rgb(87, 93, 80); 
-  text-decoration: none; /* إزالة التسطير */
-  position: sticky; /* تثبيت العنصر على الشاشة */
-  right: 20px; /* المسافة من الحافة اليمنى */
-  top: 10px; /* المسافة من الأعلى */
-  padding: 10px 15px;
-  margin-left: 30px;
+/* تخصيص لون النص */
+.text-custom {
+  color: #264440;
 }
+
+/* تخصيص الرابط */
+.link-custom {
+  color: #264440; /* نفس اللون */
+  text-decoration: none; /* إزالة الخط السفلي */
+}
+
+.link-custom:hover {
+  text-decoration: none; /* منع ظهور الخط السفلي عند التمرير */
+  color: #1a3333; /* اختيار لون أغمق عند التمرير (اختياري) */
+}
+
 
 .section-header .view-all:hover {
   text-decoration: underline; /* إضافة تسطير عند التمرير */
