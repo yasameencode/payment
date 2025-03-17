@@ -461,6 +461,22 @@ h2 {
   padding-bottom: 30px; /* مسافة أسفل الصف */
 }
 
+/* تخصيص لون زر البحث */
+.custom-search-button {
+  background-color: #264440 !important; /* اللون الأساسي */
+  border-color: #264440 !important; /* لون الحدود */
+}
+
+.custom-search-button:hover {
+  background-color: #1e3633 !important; /* لون عند التمرير */
+  border-color: #1e3633 !important; /* لون الحدود عند التمرير */
+}
+
+/* تخصيص لون النص */
+.text-custom {
+  color: #264440;
+}
+
 
 
 /* .slider-wrapper {

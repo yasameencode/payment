@@ -11,14 +11,15 @@
 </head>
 <body>
     <!-- الهيدر الثابت -->
-    <header class="fixed-top bg-dark text-white py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <span class="fw-bold fs-5">تسديد</span>
-                <img src="./img/logo_wite-removebg-preview.png" alt="Logo" class="img-fluid" style="width: 40px;">
-            </div>
-        </div>
-    </header>
+    <header class="fixed-top bg-dark text-white py-1">
+      <div class="container d-flex justify-content-between align-items-center" style="height: 50px;">
+          <div class="d-flex align-items-center">
+              <span class="fw-bold fs-6">تسديد</span>
+              <img src="./img/logo_wite-removebg-preview.png" alt="Logo" class="img-fluid ms-2" style="width: 30px;">
+          </div>
+      </div>
+  </header>
+  
 
 
   <!-- سلايدر الإعلانات -->
@@ -29,23 +30,25 @@
   </div>
   
 
-    <!-- البحث -->
-    <div class="container my-4">
-        <div class="input-group">
-            <input type="text" class="form-control" id="search-input" placeholder="ما الذي تبحث عنه؟">
-            <button class="btn btn-primary" id="search-button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-    </div>
+<!-- البحث -->
+<div class="search-container">
+  <button id="search-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke-width="1"></circle>
+      <line x1="16" y1="16" x2="22" y2="22" stroke-width="2"></line>
+    </svg>
+  </button>
+  <input type="text" id="search-input" placeholder="ما الذي تبحث عنه؟">
+</div>
 
     <!-- الأقسام -->
     <section class="container">
-        <h2 class="fw-bold mb-4">تسوق من الأكثر رواجاً</h2>
-        <div class="row row-cols-2 row-cols-md-4 g-4" id="categories-container">
-            <!-- ستُضاف الأقسام ديناميكيًا هنا -->
-        </div>
-    </section>
+      <h2 class="fw-bold mb-4 text-custom">تسوق من الأكثر رواجاً</h2>
+      <div class="row row-cols-2 row-cols-md-4 g-4" id="categories-container">
+          <!-- ستُضاف الأقسام ديناميكيًا هنا -->
+      </div>
+  </section>
+  
 
 
     <div class="slider-wrapper">
@@ -58,23 +61,42 @@
       </div>
       </div>
 
-    <!-- منتجات مضافة حديثاً -->
-    <div class="container my-5">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold text-custom">أكثر طلباً</h2>
-        <a href="./products/all_products.html" class="btn btn-link link-custom">عرض الكل</a>
-    </div>
-      <div class="overflow-auto">
-          <div class="d-flex gap-3" id="product-grid">
-              <!-- ستُضاف المنتجات ديناميكيًا هنا -->
+<!-- منتجات مضافة حديثاً -->
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold text-custom">مضافة حديثآ</h2>
+      <a href="./products/all_products.html" class="btn btn-link link-custom">عرض الكل</a>
+  </div>
+  <div class="overflow-auto">
+      <div class="d-flex flex-nowrap gap-3" id="product-grid">
+          <!-- بطاقة المنتج -->
+          <div class="card" style="min-width: 200px; max-width: 250px;">
+              <img src="./img/test.webp" class="card-img-top" alt="غسالة ملابس">
+              <div class="card-body text-center">
+                  <h5 class="card-title">غسالة ملابس</h5>
+                  <p class="card-text">د.ع 689,000</p>
+                  <button class="btn btn-success w-100">إضافة إلى السلة</button>
+              </div>
+          </div>
+          <!-- بطاقة أخرى -->
+          <div class="card" style="min-width: 200px; max-width: 250px;">
+              <img src="./img/test.webp" class="card-img-top" alt="مكنسة كهربائية">
+              <div class="card-body text-center">
+                  <h5 class="card-title">مكنسة كهربائية</h5>
+                  <p class="card-text">د.ع 340,724</p>
+                  <button class="btn btn-success w-100">إضافة إلى السلة</button>
+              </div>
+          </div>
+          <!-- يمكن تكرار المزيد من البطاقات هنا -->
       </div>
   </div>
-  
+</div>
+
 
     <!-- اكثر طلباً -->
     <div class="container my-5">
       <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold text-custom">أكثر طلباً</h2>
+        <h2 class="fw-bold text-custom">اكثر طلباً</h2>
         <a href="./products/most_requested.html" class="btn btn-link link-custom">عرض الكل</a>
     </div>
     
@@ -83,13 +105,13 @@
               <!-- ستُضاف المنتجات ديناميكيًا هنا -->
               <div class="product-card">
                   <img src="./img/test.webp" class="img-fluid" alt="غسالة ملابس">
-                  <h5 class="mt-2">غسالة ملابس</h5>
+                  <h3 class="mt-2">غسالة ملابس</h3>
                   <p>د.ع 689,000</p>
                   <button class="btn btn-success w-100">إضافة إلى السلة</button>
               </div>
               <div class="product-card">
                   <img src="./img/test.webp" class="img-fluid" alt="مكنسة كهربائية">
-                  <h5 class="mt-2">مكنسة كهربائية</h5>
+                  <h3 class="mt-2">مكنسة كهربائية</h3>
                   <p>د.ع 340,724</p>
                   <button class="btn btn-success w-100">إضافة إلى السلة</button>
               </div>
@@ -151,9 +173,8 @@
       productGrid.appendChild(productCard);
     });
   }
-  
-  
   </script>
+  
   
   
     
@@ -222,7 +243,6 @@
       console.error('Error fetching products:', error);
     }
   }
-  
   // استدعاء الدالة عند تحميل الصفحة
   document.addEventListener('DOMContentLoaded', fetchProducts);
   
@@ -230,7 +250,5 @@
   function addToCart(productId) {
     alert(`تمت إضافة المنتج رقم ${productId} إلى السلة!`);
   }
-  
-  
     </script>
 </html>
